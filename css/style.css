@@ -104,12 +104,6 @@ body {
 }
 
 @media(min-width: 500px) {
-  #credits{
-    position: absolute;
-    font-size: 1em;
-    right: 5px;
-    bottom: 5px;
-  }
   #quote-box{
     margin-left: 120px;
   }
@@ -141,6 +135,15 @@ body {
   }
 }
 
+@media all and (min-width: 500px) and (max-width: 767px){
+  #credits{
+    position: absolute;
+    font-size: 0.7em;
+    right: 5px;
+    bottom: 5px;
+  }
+}
+
 @media(max-width: 767px){
   #quote-box{
     font-size: 1em;
@@ -150,5 +153,12 @@ body {
 @media(min-width: 768px){
   #quote-box{
     font-size: 2em;
+  }
+
+  #credits{
+    position: absolute;
+    font-size: 1em;
+    right: 5px;
+    bottom: 5px;
   }
 }
