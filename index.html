@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Machine</title>
+  <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="main-wrapper" class="container">
+  <div id="quote-box" class="invisible">
+    Random quote machine:<br />
+    <ul>
+      <li>Click Quote button to get a random quote.</li>
+      <li>Click Twitter button to tweet current quote.</li>
+    </ul>
+  </div>
+  <div id="credits">Front-end design by <a href="http://github.com/jacob-hunt/" target="_blank">Jacob Hunt</a> | Powered by the <a href="https://forismatic.com/en/api/" target="_blank">Forismatic API</a></div>
+</div>
+
+<nav id="btn-bar" class="navbar fixed-bottom navbar-sm-left navbar-inverse bg-inverse">
+  <ul class="navbar-nav btn-group">
+    <li class="nav-item col">
+      <button id="btn-quote" class="invisible" type="button" onclick="randomQuote(0, 5)" class="btn btn-large btn-primary">
+        <i class="fa fa-quote-right fa-2x"></i>
+      </button>
+    </li>
+    <li class="nav-item col">
+      <button id="btn-tweet" type="button" class="invisible" onclick="tweet()"                                     class="btn btn-large btn-primary">
+        <i class="fa fa-twitter fa-2x"></i>
+      </button>
+    </li>
+  </ul>
+</nav>
+ 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script src='https://use.fontawesome.com/b1e5ec6ba4.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+body {
+  background-color: #ddd;
+}
+
+#main-wrapper{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#quote-box{
+  font-family: 'Kurale', serif;
+  background-color: #222;
+  color: #ddd;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+#credits{
+  font-family: 'Kurale', serif;
+  color: #111;
+}
+#credits > a{
+  color: #444;
+}
+
+#btn-quote{
+  width: 80px;
+  height: 80px;
+  text-size: 15px;
+  color: #fff; 
+  background-color: #a00; 
+  border-color: #a00;
+  border-radius: 100%;
+  border-style: solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+}
+#btn-tweet{
+  width: 80px;
+  height: 80px;
+  text-size: 15px;
+  color: #fff; 
+  background-color: #09f; 
+  border-color: #09f;
+  border-radius: 100%;
+  border-style: solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+#btn-quote:active{
+  padding-right: 2px; 
+}
+#btn-tweet:active{
+  padding-right: 2px;
+}
+
+#btn-quote:hover { 
+  color: #ffffff; 
+  background-color: #800; 
+  border-color: #800; 
+  cursor: pointer;
+}
+
+#btn-tweet:hover { 
+  color: #ffffff; 
+  border-color: #05e;
+  background-color: #05e;
+  cursor: pointer;
+}
+
+.navbar{
+  min-height: 100px;
+  min-width: 100px;
+}
+
+@media(max-width: 499px) {
+  #credits{
+    position: absolute;
+    font-size: 0.7em;
+    bottom: 105px;
+    left: 5px;
+  }
+  
+  #quote-box{
+    margin-bottom: 100px;
+  }
+  #btn-quote {
+    margin-right: 150px;
+    position: fixed;
+    bottom: 10px;
+    left: 15vw;
+  }
+  #btn-tweet {
+    margin-left: 150px;
+    position: fixed;
+    bottom: 10px;
+    right: 15vw;
+  }  
+  #btn-bar {
+    display: flex;
+    align-items: right;
+  }
+}
+
+@media(min-width: 500px) {
+  #credits{
+    position: absolute;
+    font-size: 1em;
+    right: 5px;
+    bottom: 5px;
+  }
+  #quote-box{
+    margin-left: 120px;
+  }
+  #btn-quote {
+    position: fixed;
+    bottom: 55vh;
+  }
+  #btn-tweet {
+    position: fixed;
+    top: 55vh;
+  }
+  .navbar-sm-left {
+    width: 120px;
+    padding: 50px;
+    position: fixed;
+    border-radius: 0;
+    height: 100%;
+  }
+  .navbar-sm-left .navbar-nav > li {
+    float: none;
+    width: 100px;
+  }
+  .navbar-sm-left + .container {
+    padding-left: 100px;
+  }
+  #btn-bar {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media(max-width: 767px){
+  #quote-box{
+    font-size: 1em;
+  }
+}
+
+@media(min-width: 768px){
+  #quote-box{
+    font-size: 2em;
+  }
+}
