@@ -18,9 +18,17 @@ function randomQuote(passCount, tryLimit){
   /* Try up to <tryLimit> times to get json from API
      and, if successful, display */
 
+  // switch to hourglass icon while loading
+  $("#quote-icon").removeClass("fa-quote-right")
+                  .addClass("fa-spinner fa-refresh fa-spin");
+
   $.getJSON("https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/"
           + "1.0/?method=getQuote&key=457653&format=json&lang=en")
   .done(function(data){
+
+      $("#quote-icon").removeClass("fa-spinner fa-refresh fa-spin")
+                      .addClass("fa-quote-right");
+
       setTimeout(function(){
         if (!data.quoteAuthor){
           var author = "Unknown";
@@ -36,12 +44,15 @@ function randomQuote(passCount, tryLimit){
         $("#quote-box").removeClass("fadeOut");
         $("#quote-box").addClass("animated fadeIn");
       }, 800)
+
   })
   .fail(function(){
       if (passCount < tryLimit){
           randomQuote(n + 1, l);
       } else {
         setTimeout( function(){
+          $("#quote-icon").removeClass("fa-spinner fa-refresh fa-spin")
+                          .addClass("fa-quote-right");
           c = randColor();
           fadeFontColor("#quote-box", c, FADE_TIME);
           fadeBgColor("body", c, FADE_TIME);
