@@ -48,7 +48,7 @@ function randomQuote(passCount, tryLimit){
   })
   .fail(function(){
       if (passCount < tryLimit){
-          randomQuote(n + 1, l);
+          randomQuote(passCount + 1, tryLimit);
       } else {
         setTimeout( function(){
           $("#quote-icon").removeClass("fa-spinner fa-refresh fa-spin")
