@@ -18,7 +18,7 @@ function randomQuote(passCount, tryLimit){
   /* Try up to <tryLimit> times to get json from API
      and, if successful, display */
 
-  // switch to hourglass icon while loading
+  // switch to spinner icon while loading
   $("#quote-icon").removeClass("fa-quote-right")
                   .addClass("fa-spinner fa-refresh fa-spin");
 
