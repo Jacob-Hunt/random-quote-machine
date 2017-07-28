@@ -20,13 +20,13 @@ function randomQuote(passCount, tryLimit){
 
   // switch to spinner icon while loading
   $("#quote-icon").removeClass("fa-quote-right")
-                  .addClass("fa-spinner fa-refresh fa-spin");
+                  .addClass("fa-circle-o-notch fa-refresh fa-spin");
 
   $.getJSON("https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/"
           + "1.0/?method=getQuote&key=457653&format=json&lang=en")
   .done(function(data){
 
-      $("#quote-icon").removeClass("fa-spinner fa-refresh fa-spin")
+      $("#quote-icon").removeClass("fa-circle-o-notch fa-refresh fa-spin")
                       .addClass("fa-quote-right");
 
       setTimeout(function(){
@@ -51,7 +51,7 @@ function randomQuote(passCount, tryLimit){
           randomQuote(passCount + 1, tryLimit);
       } else {
         setTimeout( function(){
-          $("#quote-icon").removeClass("fa-spinner fa-refresh fa-spin")
+          $("#quote-icon").removeClass("fa-circle-o-notch fa-refresh fa-spin")
                           .addClass("fa-quote-right");
           c = randColor();
           fadeFontColor("#quote-box", c, FADE_TIME);
